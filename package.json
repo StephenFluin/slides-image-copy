@@ -1,0 +1,19 @@
+{
+  "name": "slides-image-copy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension: copy any web image (SVG, WebP, AVIF, inline SVG, CSS backgrounds) as PNG, or save as PNG/JPG.",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit && node build.mjs",
+    "test:build": "esbuild test/harness.ts --bundle --format=iife --outfile=test/dist/harness.js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
